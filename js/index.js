@@ -18,12 +18,17 @@ module.exports = function(opts) {
         /**
          * Client ID from the API console.
          */
-        clientId: "433441741368-1dg8gkof5pcfdgajm6hbfrinl4je6c2v.apps.googleusercontent.com",
+        clientId: YOUR_CLIENT_ID_HERE,
 
         /**
          * Application ID from the API console.
          */
-        appId: "433441741368-1dg8gkof5pcfdgajm6hbfrinl4je6c2v",
+        appId: YOUR_APP_ID_HERE,
+
+        /**
+         * File ID.
+         */
+        fileId: undefined,
 
         /**
          * Function to be called when a RealTime model is first created.
@@ -245,7 +250,7 @@ module.exports = function(opts) {
         // create the player from a minecraft skin file and tell the
         // game to use it as the main player
         var createPlayer = player(game);
-        var substack = createPlayer('player.png');
+        var substack = createPlayer('images/player.png');
         substack.yaw.position.set(2, 14, 4);
         substack.possess();
 
@@ -298,6 +303,7 @@ module.exports = function(opts) {
         $("#loader").hide();
         $("#crosshair").show();
         $("#authorizeButton").hide();
+        $("#authorizeMessage").hide();
     }
     function onAuthFailure() {
         console.debug('Auth failure');

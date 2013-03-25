@@ -20,6 +20,6 @@
     "browservefy": "0.0.9"
   },
   "scripts": {
-    "start": "browservefy test.js:bundle.js 8080 -- -d"
+    "start": "browservefy js/startup.js:bundle.js 8080 -- -d"
   }
 }

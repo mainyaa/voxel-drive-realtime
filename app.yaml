@@ -1,0 +1,60 @@
+application: voxel-drive-realtime
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /
+  static_files: index.html
+  upload: index.html
+  secure: always
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+  secure: always
+
+- url: /screenshot.png
+  static_files: screenshot.png
+  upload: screenshot.png
+  secure: always
+
+- url: /bundle.js
+  static_files: bundle.js
+  upload: bundle.js
+  secure: always
+
+- url: /images
+  static_dir: images
+  secure: always
+
+- url: /node_modules/painterly-textures/textures
+  static_dir: node_modules/painterly-textures/textures
+  secure: always
+
+- url: /js
+  static_dir: js
+  secure: always
+
+
+skip_files:
+# Default patterns skipped by App Engine, which must be repeated since
+# specifying skip_files overrides them otherwise.  See
+# https://developers.google.com/appengine/docs/python/config/appconfig#Skipping_Files.
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?index\.yaml
+- ^(.*/)?index\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+# Build files that have no effect in App Engine's runtime.
+- ^.*\.MF$
+- ^.*\.CMF$
+- ^.*\.so$
+- ^.*pywrap.+\.py$
+- ^.*\.jslib$
