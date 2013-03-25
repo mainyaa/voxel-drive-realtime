@@ -22,13 +22,15 @@ npm start
 
 Then point your browser to [http://localhost:8080](http://localhost:8080) and have fun!
 
+## Demo
+
+https://voxel-drive-realtime.appspot.com
+
 ## Larn more
 
-[Voxel.JS](http://voxeljs.com),
-[Google Drive Realtime API](https://developers.google.com/drive/realtime),
-[browserify](http://browserify.org)
+[Voxel.JS](http://voxeljs.com), [Google Drive Realtime API](https://developers.google.com/drive/realtime), [browserify](http://browserify.org).
 
 
 ## license
 
-BSD
+BSD License.
