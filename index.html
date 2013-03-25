@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <title>Voxel Drive Realtime</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+      body {
+        font-family: Monospace;
+        font-size: 12px;
+        background-color: #f0f0f0;
+        margin: 0px;
+        overflow: hidden;
+      }
+      #container {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      #crosshair {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin: -16px 0 0 -16px;
+        width: 32px;
+        height: 32px;
+      }
+      #loader {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin: -64px 0 0 -64px;
+        width: 128px;
+        height: 128px;
+      }
+      #authorizeMessage {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+
+      #stats { bottom: 0px; right: 0px; }
+      .bar-tab { right: 33% !important; left: 33% !important; }
+      .logo {position: absolute; bottom: 5px; left: 5px; }
+      .errorMessage { text-align: center; width: 200px; margin: 20px auto; }
+      .collaborator-image { width: 16px; height: 16px }
+      #collaborators { float: left; }
+      #title { float: left; }
+      #collaborators-container { float: left; }
+      .collaborator { float: left; }
+    </style>
+  </head>
+  <body>
+    <img class="logo" src="logo-white.png" alt="" />
+    <button style="margin-left: 200px;" id="authorizeButton" disabled class="button button-submit">Authorize for Google Drive</button>
+    <div id="collaborators">
+    <div id="title"><b>Collaborators:</b></div>
+    <div id="collaborators-container">
+    </div>
+    <button id="shareButton" class="button button-share" onclick="showShareDialog()">Share</button>
+    </div>
+    <div id="container"></div>
+    <div id="loader"><img src="loader.gif" alt="loading" /></div>
+    <div id="authorizeMessage" style="display:none;">Please click "Authorize for Google"</div>
+    <div id="crosshair" style="display:none;"><img src="crosshair.png" alt="" /></div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://apis.google.com/js/api.js"></script>
+    <script type="text/javascript" src="bundle.js"></script>
+  </body>
+</html>

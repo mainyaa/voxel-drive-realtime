@@ -1,0 +1,57 @@
+### /Users/kazuyukimori/.gitignore-boilerplates/Global/vim.gitignore
+
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
+
+### /Users/kazuyukimori/.gitignore-boilerplates/Global/tags.gitignore
+
+# Ignore tags created by etags and ctags
+TAGS
+!TAGS/
+tags
+!tags/
+
+
+### /Users/kazuyukimori/.gitignore-boilerplates/Global/linux.gitignore
+
+.*
+!.gitignore
+*~
+
+
+### /Users/kazuyukimori/.gitignore-boilerplates/Global/osx.gitignore
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+### /Users/kazuyukimori/.gitignore-boilerplates/node.gitignore
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+
