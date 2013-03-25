@@ -24,8 +24,8 @@ Then point your browser to [http://localhost:8080](http://localhost:8080) and ha
 
 ## Larn more
 
-[Voxel.JS](http://voxeljs.com).
-[Google Drive Realtime API](https://developers.google.com/drive/realtime).
+[Voxel.JS](http://voxeljs.com),
+[Google Drive Realtime API](https://developers.google.com/drive/realtime),
 [browserify](http://browserify.org)
 
 

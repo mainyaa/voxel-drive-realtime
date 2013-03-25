@@ -286,6 +286,7 @@ rtclient.RealtimeLoader = function(options) {
   this.registerTypes = rtclient.getOption(options, 'registerTypes', function(){})
   this.autoCreate = rtclient.getOption(options, 'autoCreate', false); // This tells us if need to we automatically create a file after auth.
   this.defaultTitle = rtclient.getOption(options, 'defaultTitle', 'New Realtime File');
+  this.fileId = rtclient.getOption(options, 'fileId');
   this.authorizer = new rtclient.Authorizer(options);
 }
 
@@ -314,7 +315,7 @@ rtclient.RealtimeLoader.prototype.start = function(afterAuth, onAuthFailure) {
  * parameters.
  */
 rtclient.RealtimeLoader.prototype.load = function() {
-  var fileId = rtclient.params['fileId'];
+  var fileId = this.fileId || rtclient.params['state'];
   var userId = this.authorizer.userId;
   var state = rtclient.params['state'];
 
