@@ -2,7 +2,9 @@ var createGame = require('voxel-engine');
 var highlight = require('voxel-highlight');
 var skin = require('minecraft-skin');
 var player = require('voxel-player');
+var createTree = require('voxel-forest');
 var texturePath = require('painterly-textures')(__dirname);
+var createTerrain = require('voxel-perlin-terrain');
 var voxel = require('voxel');
 var extend = require('extend');
 var rtclient = require('./realtime-client-utils');
@@ -224,34 +226,32 @@ module.exports = function(opts) {
 
     function startGame() {
         var defaults = {
-            generate: voxel.generator['Valley'],
+            generateVoxelChunk: createTerrain({scaleFactor:10}),
             chunkDistance: 2,
             materials: [
-                ['grass', 'dirt', 'grass_dirt'],
                 'obsidian',
-                'brick',
+                ['grass', 'dirt', 'grass_dirt'],
                 'grass',
                 'plank'
-        ],
-        texturePath: texturePath,
-        worldOrigin: [0, 0, 0],
-        controls: { discreteFire: true }
+            ],
+            texturePath: texturePath,
+            worldOrigin: [0, 0, 0],
+            fogDisabled: true,
+            controls: { discreteFire: true }
         };
         opts = extend({}, defaults, opts || {});
 
         // setup the game and add some trees
         var game = createGame(opts);
-
         window.game = game; // for debugging
         var container = opts.container || document.body;
-
         game.appendTo(container);
 
         // create the player from a minecraft skin file and tell the
         // game to use it as the main player
         var createPlayer = player(game);
         var substack = createPlayer('images/player.png');
-        substack.yaw.position.set(2, 14, 4);
+        substack.yaw.position.set(0, 100, 0);
         substack.possess();
 
         // highlight blocks when you look at them, hold <Ctrl> for block placement

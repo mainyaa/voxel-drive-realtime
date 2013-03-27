@@ -10,6 +10,10 @@
     "voxel-engine": "0.14.2",
     "voxel-highlight": "0.0.8",
     "voxel-player": "0.1.0",
+    "voxel-perlin-terrain": "0.0.5",
+    "voxel-debris": "0.0.4",
+    "voxel-sky": "0.1.2",
+    "voxel-forest": "0.0.0",
     "minecraft-skin": "0.0.1",
     "painterly-textures": "0.0.3",
     "toolbar": "0.0.5",
@@ -21,5 +25,11 @@
   },
   "scripts": {
     "start": "browservefy js/startup.js:bundle.js 8080 -- -d"
-  }
+  },
+  "keywords": [
+    "voxel",
+    "google drive",
+    "realtime"
+  ]
 }
+
