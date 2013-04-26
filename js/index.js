@@ -226,11 +226,12 @@ module.exports = function(opts) {
 
     function startGame() {
         var defaults = {
-            generateVoxelChunk: createTerrain({scaleFactor:10}),
+            generate: voxel.generator['Valley'],
             chunkDistance: 2,
             materials: [
-                'obsidian',
                 ['grass', 'dirt', 'grass_dirt'],
+                'obsidian',
+                'brick',
                 'grass',
                 'plank'
             ],
