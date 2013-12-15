@@ -34,3 +34,7 @@ https://voxel-drive-realtime.appspot.com
 ## license
 
 BSD License.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mainyaa/voxel-drive-realtime/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
